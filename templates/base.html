@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<script src="{{ url_for('static', filename='js/jquery-2.0.3.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.glide.min.js') }}"></script>
+	<title>Run / Code</title>
+	{% endblock %}
+</head>
+<body>
+	{% block body %}
+	<div id="content" class="container">
+		{% block content %}{% endblock %}
+		<div class="row">
+			<div class="col-10 action">{% block action %}{% endblock %}</div>
+			<div class="col-2"><img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code"></div>
+		</div>
+		<div class="row">
+			<div class="col-12 action">{% block slide %}{% endblock %}</div>
+		</div>
+	</div>
+	{% endblock %}
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript">
+		var glide = $('.slider').glide().data('api_glide');
+		glide.pause();
+		$('.slider-arrow--right').html(">");
+		$('.slider-arrow--left').html("<");
+	</script>
+</body>
+</html>

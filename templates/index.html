@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block action %}
+	<div id="button_area">
+		<a class="btn btn-lg btn-default" href="">button</a>
+		<a class="btn btn-lg btn-primary" href="">button</a>
+		<a class="btn btn-lg btn-success" href="">button</a>
+	</div>
+{% endblock %}
+{% block slide %}
+<div class="slider">
+	<ul class="slides">
+		<li class="slide"><img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code"></li>
+		<li class="slide"><img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code"></li>
+	</ul>
+</div>
+{% endblock %}
+
