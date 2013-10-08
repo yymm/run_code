@@ -1,17 +1,44 @@
 {% extends "base.html" %}
+
 {% block action %}
-	<div id="button_area">
-		<a class="btn btn-lg btn-default" href="">button</a>
-		<a class="btn btn-lg btn-primary" href="">button</a>
-		<a class="btn btn-lg btn-success" href="">button</a>
-	</div>
-{% endblock %}
-{% block slide %}
-<div class="slider">
-	<ul class="slides">
-		<li class="slide"><img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code"></li>
-		<li class="slide"><img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code"></li>
-	</ul>
-</div>
+	<a class="btn btn-lg btn-primary" href="">Run</a>
+	<a class="btn btn-lg btn-success" href="">Stop</a>
+	<a class="btn btn-lg btn-default" href="">Save</a>
 {% endblock %}
 
+{% block info %}
+	<h3 onclick="change_theme();">Project Name</h3>
+{% endblock %}
+
+{% block meta %}
+	<h3><a href="">log out</a></h3>
+{% endblock %}
+
+{% block content %}
+<div class="slider">
+	<div class="slides">
+		<div class="slide">
+			<h1>Status</h1>
+			<textarea id="output" name=""></textarea>
+		</div>
+		<div class="slide">
+			<h1>Code</h1>
+			<textarea id="output" name=""></textarea>
+		</div>
+		<div class="slide">
+			<h1>Preference</h1>
+			<img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code">
+		</div>
+	</ul>
+</div>
+<!--Glide Instance-->
+<script type="text/javascript">
+	var glide = $('.slider').glide({
+			autoplay: 1000000,
+			arrowRightText: '>',
+			arrowLeftText: '<'
+	});
+	$('.slider-arrow--right').css("text-decoration", "none");
+	$('.slider-arrow--left').css("text-decoration", "none");
+</script>
+{% endblock %}
