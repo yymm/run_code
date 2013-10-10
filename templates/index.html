@@ -1,13 +1,22 @@
 {% extends "base.html" %}
 
+
+
 {% block head %}
 	<script src="{{ url_for('static', filename='codemirror/lib/codemirror.js') }}"></script>
+	<script src="{{ url_for('static', filename='codemirror/mode/shell/shell.js') }}"></script>
 	<script src="{{ url_for('static', filename='codemirror/mode/python/python.js') }}"></script>
+	<script src="{{ url_for('static', filename='codemirror/mode/ruby/ruby.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/jquery.linedtextarea.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.glide.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/script.head.js') }}"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/glide.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='codemirror/lib/codemirror.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='codemirror/theme/solarized.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.linedtextarea.css') }}">
 {% endblock %}
+
+
 
 {% block action %}
 	<a class="btn btn-lg btn-primary" href="">Run</a>
@@ -15,13 +24,19 @@
 	<a class="btn btn-lg btn-default" href="">Save</a>
 {% endblock %}
 
+
+
 {% block info %}
 	<h3 onclick="change_theme();">Project Name</h3>
 {% endblock %}
 
+
+
 {% block meta %}
 	<h3><a href="">log out</a></h3>
 {% endblock %}
+
+
 
 {% block content %}
 <div class="slider">
@@ -43,31 +58,5 @@
 		</div>
 	</ul>
 </div>
-<script type="text/javascript">
-	// Glide Instance
-	var glide = $('.slider').glide({
-			autoplay: 1000000,
-			arrowRightText: '>',
-			arrowLeftText: '<'
-	});
-	$('.slider-arrow--right').css("text-decoration", "none");
-	$('.slider-arrow--left').css("text-decoration", "none");
-
-	// CodeMirror Instance
-	editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-	    lineNumbers: true,
-	    mode: "python",
-		theme: "solarized light"
-	});
-
-	// linedtextarea Instance
-	lineNo_suffix = "";
-	lineNo_prefix = "";
-	$(function() {
-		$(".lined").linedtextarea(
-			{selectedLine: 0}
-		);
-	});
-
-</script>
+<script src="{{ url_for('static', filename='js/script.body.js') }}"></script>
 {% endblock %}
