@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 
+{% block head %}
+	<script src="{{ url_for('static', filename='codemirror/lib/codemirror.js') }}"></script>
+	<script src="{{ url_for('static', filename='codemirror/mode/python/python.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.linedtextarea.js') }}"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='codemirror/lib/codemirror.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='codemirror/theme/solarized.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.linedtextarea.css') }}">
+{% endblock %}
+
 {% block action %}
 	<a class="btn btn-lg btn-primary" href="">Run</a>
 	<a class="btn btn-lg btn-success" href="">Stop</a>
@@ -18,12 +27,15 @@
 <div class="slider">
 	<div class="slides">
 		<div class="slide">
-			<h1>Status</h1>
-			<textarea id="output" name=""></textarea>
+			<div class="slide-header">
+				<h1 style="display:inline;">Code</h1>
+				<select class="lang-select" size="1"></select>
+			</div>
+			<textarea id="code" name="code"></textarea>
 		</div>
 		<div class="slide">
-			<h1>Code</h1>
-			<textarea id="output" name=""></textarea>
+			<h1>Status</h1>
+			<textarea class="lined" id="status" name="status"></textarea>
 		</div>
 		<div class="slide">
 			<h1>Preference</h1>
@@ -31,8 +43,8 @@
 		</div>
 	</ul>
 </div>
-<!--Glide Instance-->
 <script type="text/javascript">
+	// Glide Instance
 	var glide = $('.slider').glide({
 			autoplay: 1000000,
 			arrowRightText: '>',
@@ -40,5 +52,22 @@
 	});
 	$('.slider-arrow--right').css("text-decoration", "none");
 	$('.slider-arrow--left').css("text-decoration", "none");
+
+	// CodeMirror Instance
+	editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+	    lineNumbers: true,
+	    mode: "python",
+		theme: "solarized light"
+	});
+
+	// linedtextarea Instance
+	lineNo_suffix = "";
+	lineNo_prefix = "";
+	$(function() {
+		$(".lined").linedtextarea(
+			{selectedLine: 0}
+		);
+	});
+
 </script>
 {% endblock %}

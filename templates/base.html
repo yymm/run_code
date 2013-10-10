@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-	{% block head %}
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="viewport" content="user-scalable=no">
+	<script src="{{ url_for('static', filename='js/jquery-2.0.3.min.js') }}"></script>
+	{% block head %}
+	{% endblock %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/glide.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-	<script src="{{ url_for('static', filename='js/jquery-2.0.3.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/jquery.glide.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	<title>Run / Code</title>
-	{% endblock %}
 </head>
 
 <body>

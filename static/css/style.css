@@ -21,7 +21,7 @@ textarea {
     -moz-transition:all 200ms ease;
     -webkit-transition:all 200ms ease;
     -o-transition:all 200ms ease;
-    -ms-transition:all 200ms ease;
+	-ms-transition:all 200ms ease;
 }
 
 textarea:focus {
@@ -55,6 +55,20 @@ textarea:focus {
 	text-align: right;
 }
 
+.lang-select {
+	float: right;
+	margin: 13px 0px 0px;
+	padding: 3px;
+	border: solid 2px #444;
+	border-radius: 4px;
+	background-color: #ddd;
+	color: #444;
+}
+
+.slide-header {
+	margin: 10px;
+}
+
 /* Bootstrap override */
 h1, h2, h3 {
 	margin-top: 10px;
@@ -62,4 +76,11 @@ h1, h2, h3 {
 
 .btn {
 	margin: 2px 2px 2px 0px;
+}
+
+/* CodeMirror override */
+.CodeMirror {
+	height: 85%;
+	border-radius: 10px;
+	font-size: 120%;
 }
