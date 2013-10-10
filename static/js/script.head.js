@@ -20,7 +20,8 @@ function change_theme() {
 }
 
 $(document).ready( function() {
-	lang_list = new Array('html', 'python', 'ruby')
+	$('.lang-select').append('<option id="shell" selected>shell</option>')
+	lang_list = new Array('python', 'ruby')
 	for (var i = 0; i < lang_list.length; i++)
 	{
 		$('.lang-select').append('<option id=' + lang_list[i] + '>' + lang_list[i] + '</option>')

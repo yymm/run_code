@@ -4,12 +4,14 @@
 }
 .linedtextarea {
     margin: 0;
-    padding-top: 3px;
+	/*padding-top: 5px;*/
 	height: 100%;
 }
 .linedtextarea textarea, .linedwrap .codelines .lineno {
     font-family: monospace;
-    line-height: normal !important;
+    /*line-height: normal !important;*/
+    line-height: 130% !important;
+	/*padding-bottom: 3px;*/
 }
 .linedtextarea textarea {
     border: 0 none;
@@ -20,7 +22,7 @@
     overflow: hidden;
 }
 .linedwrap .codelines {
-    padding-top: 8px;
+	padding-top: 3.5px;
 }
 .linedwrap .codelines .lineno {
     color: #555;
