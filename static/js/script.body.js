@@ -28,3 +28,20 @@ $('.lang-select').change( function() {
 	var value = $('.lang-select').val();
 	editor.setOption("mode", value);
 });
+
+/* socket */
+$(function(){
+	var host = "ws://localhost:8000/status";
+	var socket = new WebSocket(host);
+	
+	socket.onmessage = function(message){
+		$("#status").val($("#status").val() + message.data);
+		console.log(message.data);
+	}
+	
+	$("#run-btn").on("click",function(){
+		message = $(".CodeMirror").find("textarea").val();
+		$("#status").val("");
+		socket.send(message);
+	});
+})
