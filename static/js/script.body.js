@@ -2,8 +2,8 @@
 var glide = $('.slider').glide({
 		autoplay: 1000000,
 		arrowRightText: '>',
-		arrowLeftText: '<'
-});
+		arrowLeftText: '<',
+}).data('api_glide');
 $('.slider-arrow--right').css("text-decoration", "none");
 $('.slider-arrow--left').css("text-decoration", "none");
 
@@ -31,7 +31,7 @@ $('.lang-select').change( function() {
 
 /* socket */
 $(function(){
-	var host = "ws://localhost:8000/status";
+	var host = "ws://192.168.5.7:5902/status";
 	var socket = new WebSocket(host);
 	
 	socket.onmessage = function(message){
@@ -40,8 +40,9 @@ $(function(){
 	}
 	
 	$("#run-btn").on("click",function(){
-		message = $(".CodeMirror").find("textarea").val();
+		message = editor.getValue();
 		$("#status").val("");
+		glide.jump(2, console.log("jump"));
 		socket.send(message);
 	});
 })

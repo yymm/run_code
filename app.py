@@ -26,10 +26,9 @@ def echo_status_with_socket(ws):
                              stdout=subprocess.PIPE,
                              stderr=subprocess.STDOUT,
                              close_fds=True)
-        (stdouterr, stdin) = (p.stdout, p.stdin)
+        (stdout, stdin) = (p.stdout, p.stdin)
         while True:
-            time.sleep(0.2)
-            line = stdouterr.readline()
+            line = stdout.readline()
             if not line:
               break
             ws.send(line)

@@ -24,8 +24,8 @@ textarea {
 }
 
 textarea:focus {
-	background-color: #777;
-	border: solid 2px #777;
+	background-color: #aaa;
+	border: solid 2px #aaa;
 	color: #111;
 }
 
