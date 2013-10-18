@@ -4,7 +4,6 @@ from flask import Flask, render_template, \
         request, redirect, url_for
 from flask_sockets import Sockets
 import subprocess
-import time
 
 app = Flask(__name__)
 sockets = Sockets(app)
