@@ -1,6 +1,6 @@
 ![RunCode](static/css/img/Run_Code_Logo.png)
 
-	&
+&
 
 ![CodeStats](static/css/img/Code_Stats_Logo.png)
 
