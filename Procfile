@@ -1,2 +1,2 @@
 web: gunicorn -k flask_sockets.worker app:app
-labs:enable websockets
+labs: websockets
