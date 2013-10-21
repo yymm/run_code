@@ -10,3 +10,9 @@ Logo
 
 ![CodeStats](static/css/img/Code_Stats_Logo.png)
 
+Heroku
+------
+
+Automatically deploy to Heroku by drone.io!
+
+[Run/Code](http://run-code.herokuapp.com/)
