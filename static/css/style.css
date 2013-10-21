@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-	background: url('img/dark-noise.png') repeat scroll 0 0 #000;
+	background: url('../img/dark-noise.png') repeat scroll 0 0 #000;
 	color: #ccc;
 }
 

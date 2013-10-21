@@ -1,0 +1,51 @@
+#spacer{
+  height:100px;
+}
+
+.box{
+  border-radius:25px;
+  background:#888;
+  padding:3px 0px;
+  padding-left:14px;
+  width:45px;
+  height:45px;
+  margin:auto;
+  overflow:hidden;
+  white-space: nowrap;
+  transition:all .2s ease;
+  border:1px solid #888;
+}
+.text{
+  width: auto;
+  margin-left:15px;
+  background:#38E;
+  color:white;
+  border:none;
+  outline:transparent;
+  padding:5px;
+  font-size:12pt;
+  
+}
+.login-method {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#form-container, #icon {
+  display:inline-block;
+  vertical-align:top;
+}
+#icon {
+  margin-top:10px;
+}
+
+.showbox {
+  background:#39F;
+  width:100%;
+  transition-delay:0s;
+  border:1px solid #39F;
+}
+
+.showpass {
+  height:88px;
+}

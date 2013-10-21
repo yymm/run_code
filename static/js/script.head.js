@@ -3,7 +3,7 @@ function change_theme() {
 	if (cnt % 2 == 0)
 	{
 		$("body").css({
-			"background" : "url('static/css/img/light-noise.png') repeat 0 0 #fff",
+			"background" : "url('static/img/light-noise.png') repeat 0 0 #fff",
 			"color" : "#555"
 		});
 		editor.setOption("theme", "solarized dark");
@@ -11,7 +11,7 @@ function change_theme() {
 	else
 	{
 		$("body").css({
-			"background" : "url('static/css/img/dark-noise.png') repeat 0 0 #fff",
+			"background" : "url('static/img/dark-noise.png') repeat 0 0 #fff",
 			"color" : "#ccc"
 		});
 		editor.setOption("theme", "solarized light");

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+{% endblock %}
+
+{% block info %}
+	<h3>Code / Stats</h3>
+{% endblock %}
+
+
+
+{% block meta %}
+	<h3><a href="{{ url_for('login') }}">log in</a></h3>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+	<div id="spacer"></div>
+
+	<div class="col-4">
+		<h1 class="login-method">OAuth</h1>
+		<div class="box">
+			<i id="icon" class="icon-key icon-large"></i>
+		</div>
+	</div>
+
+
+	<div class="col-4">
+		<h1 class="login-method">Login</h1>
+		<div id="login">
+			<div id="loginbox" class="box">
+				<i id="icon" class="icon-power-off icon-large"></i>
+				<div id="form-container">
+					<input class="text" id="logintext" type="text" placeholder="Name" size="32"></input>
+					<br></br>
+					<input class="text" id="loginpass" type="password" placeholder="Password" size="32">
+					</input>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	  
+	<div class="col-4">
+		<h1 class="login-method">Sign up</h1>
+		<div id="login">
+			<div id="box" class="box">
+				<i id="icon" class="icon-plus icon-large"></i>
+				<div id="form-container">
+					<input class="text" id="signuptext" type="text" placeholder="Name" size="32"></input>
+					<br></br>
+					<input class="text" id="signuppass" type="password" placeholder="Password" size="32">
+					</input>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+{% endblock %}

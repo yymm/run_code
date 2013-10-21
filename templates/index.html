@@ -27,13 +27,13 @@
 
 
 {% block info %}
-	<h3 onclick="change_theme();">Project Name</h3>
+	<h3 onclick="change_theme();">Run / Code</h3>
 {% endblock %}
 
 
 
 {% block meta %}
-	<h3><a href="">log out</a></h3>
+	<h3><a href="{{ url_for('login') }}">log in</a></h3>
 {% endblock %}
 
 
@@ -54,9 +54,9 @@
 		</div>
 		<div class="slide">
 			<h1>Preference</h1>
-			<img src="{{ url_for('static', filename='css/img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code">
+			<img src="{{ url_for('static', filename='img/Run_Code_Logo.png') }}" class="img-responsive logo" alt="Run / Code">
 			<br />
-			<img src="{{ url_for('static', filename='css/img/Code_Stats_Logo.png') }}" class="img-responsive logo" alt="Code / Stats">
+			<img src="{{ url_for('static', filename='img/Code_Stats_Logo.png') }}" class="img-responsive logo" alt="Code / Stats">
 		</div>
 	</ul>
 </div>
