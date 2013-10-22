@@ -6,9 +6,9 @@ Run / Code . Code / Stats
 Logo
 ----
 
-![RunCode](static/css/img/Run_Code_Logo.png)
+![RunCode](static/img/Run_Code_Logo.png)
 
-![CodeStats](static/css/img/Code_Stats_Logo.png)
+![CodeStats](static/img/Code_Stats_Logo.png)
 
 Heroku
 ------
