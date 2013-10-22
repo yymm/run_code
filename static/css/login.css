@@ -4,7 +4,7 @@
 
 .box{
   border-radius:25px;
-  background:#888;
+  background:#000;
   padding:3px 0px;
   padding-left:14px;
   width:45px;
@@ -13,18 +13,19 @@
   overflow:hidden;
   white-space: nowrap;
   transition:all .5s ease;
-  border:1px solid #888;
+  border:1px solid #000;
 }
 .text{
   width: auto;
   margin-left:15px;
-  background:#38E;
-  color:white;
+  margin-bottom: 10px;
+  background:#33ff99;
+  color:#000;
   border:none;
   outline:transparent;
-  padding:5px;
+  padding:8px;
   font-size:12pt;
-  
+  border-radius: 5px;
 }
 .login-method {
   text-align: center;
@@ -40,22 +41,25 @@
 }
 
 .showbox {
-  background:#39F;
+  background:#aaa;
+  color: #555;
   width:100%;
   transition-delay:0s;
-  border:1px solid #39F;
+  border:1px solid #aaa;
 }
 
 .showpass {
-  height:88px;
+  height:90px;
 }
+
+/* OAUTH */
 
 .showoauth {
   height:65px;
-  background:#ccc;
+  background:#aaa;
   width:100%;
   transition-delay:0s;
-  border:1px solid #ccc;
+  border:1px solid #aaa;
   color: #555;
 }
 .iconfolder {
