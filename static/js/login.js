@@ -44,3 +44,12 @@ $("#signuptext, #signuppass").focusin( function () {
    $("#box").addClass("showbox showpass");
 });
 
+///////////// OAUTH ////////////////
+
+$("#oauthbox").mouseenter( function () {
+   $("#oauthbox").addClass("showoauth");
+});
+
+$("#oauthbox").mouseleave( function () {
+   $("#oauthbox").removeClass("showoauth");
+});
