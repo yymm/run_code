@@ -1,8 +1,5 @@
-from flask.ext.sqlalchemy import SQLAlchemy
-from app import app
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/run_code.db'
-db = SQLAlchemy(app)
+from run_code import db
+import os
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
