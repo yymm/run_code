@@ -31,9 +31,9 @@ $('.lang-select').change( function() {
 
 /* socket */
 $(function(){
-	var host = "ws://localhost:8000/status";
+	var host = location.origin.replace(/^http/, 'ws') + "/status";
 	var socket = new WebSocket(host);
-	
+
 	socket.onmessage = function(message){
 		$("#status").val($("#status").val() + message.data);
 		console.log(message.data);
