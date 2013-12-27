@@ -29,7 +29,6 @@
 }
 
 .slide {
-	width: 100%;
 	height: 100%;
 	float: left;
 	clear: none;
@@ -46,7 +45,7 @@
 	position: absolute;
 	display: block;
 	margin-bottom: -20px;
-	border: solid 1px #444;
+	border: solid 1px #555;
 	border-radius: 20px;
 
     -moz-transition:all 300ms ease;
